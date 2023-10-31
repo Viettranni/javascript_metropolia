@@ -1,4 +1,4 @@
-'use scrict';
+'use strict';
 let name = prompt('Please enter your name!')
 let character;
 let result = Math.floor(Math.random()*4) + 1;
