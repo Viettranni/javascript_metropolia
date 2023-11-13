@@ -1,5 +1,7 @@
 'use strict';
 
+const element = document.querySelector('#target')
+
 let amountRolls = prompt('Enter the amount of the Rolls!')
 amountRolls = parseInt(amountRolls)
 
@@ -15,6 +17,4 @@ for (let i = 0; i < amountRolls; i++) {
   sum +=rollResult
 }
 
-let finalAnswer = ` Rolls counted: ${sum} `
-
-document.querySelector('#target').innerHTML = finalAnswer;
+element.innerHTML = ` Rolls counted: ${sum} `;
