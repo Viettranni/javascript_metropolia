@@ -11,15 +11,20 @@ if (userConfirmed) {
         inputNumber = prompt('Give me a number');
         inputNumber = parseInt(inputNumber);
 
-        if (inputNumber >= 0) {
-            break;
+        if (isNaN(inputNumber)) {
+            alert('Please enter a valid number.');
+            continue;
         }
 
-        alert('Please enter a non-negative number.');
+        if (inputNumber <= 0) {
+            finalAnswer = 'The square root of a negative number is not defined.';
+            break;
+        } else {
+            const squareRoot = Math.sqrt(inputNumber);
+            finalAnswer = `The square root is ${squareRoot}!`;
+            break;
+        }
     }
-
-    const squareRoot = Math.sqrt(inputNumber);
-    finalAnswer = `The square root is ${squareRoot}!`;
 } else {
     finalAnswer = 'The square root is not calculated.';
 }

@@ -1,16 +1,13 @@
 'use strict'
 
-let enterYear = prompt('Please enter the Year!')
-enterYear = parseInt(enterYear)
+let enterYear = parseInt(prompt('Enter a Year!'));
 
-let character;
+let finalAnswer;
 
 if ((enterYear % 100 === 0 && enterYear % 400 === 0) || (enterYear % 4 === 0 && enterYear % 100 !== 0)) {
-  character = `The ${enterYear} Year IS a Leap Year!`;
+  finalAnswer = `The ${enterYear} Year is a leap`;
 } else {
-  character = `The ${enterYear} Year IS NOT a Leap Year!`;
+  finalAnswer = `The ${enterYear} Year is a non-leap`;
 }
-
-const finalAnswer = character
 
 document.querySelector('#target').innerHTML = finalAnswer;

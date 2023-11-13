@@ -18,6 +18,3 @@ if (result === 1){
 const finalAnswer = `${name}, you are ${character}`
 
 document.querySelector('#target').innerHTML = finalAnswer;
-
-
-
