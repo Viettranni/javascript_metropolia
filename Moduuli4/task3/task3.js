@@ -18,7 +18,8 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 // Print the following information: name(h2), URL(a), Medium Image(<img src="" alt="">), summary (p)
 function displayResults(results) {
   const resultsContainer = document.getElementById('searchResults');
-  
+
+  // Clear existing content inside this div to make sure it replaces the previous content
   resultsContainer.innerHTML = "";
   
   results.forEach(({ show }) => {
